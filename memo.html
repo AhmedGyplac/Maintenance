@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande d'intervention</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eaf3ff;
+        }
+        .header {
+            background-color: #b0d5ff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 200px;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #ffffe0;
+        }
+        .form-group textarea {
+            height: 40px;
+            resize: vertical;
+        }
+        .form-group .small-input {
+            width: 20%;
+        }
+        .form-group input[type="date"] {
+            margin-right: 5mm; /* Espace de 5 mm entre la date et l'heure */
+        }
+        .radio-group {
+            margin-bottom: 5mm; /* Espace de 5 mm entre les boutons de priorité et l'élément suivant */
+        }
+        .form-group .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .radio-group input {
+            margin-right: 5px;
+        }
+        .form-group .radio-group label {
+            margin-right: 20px;
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form-buttons .submit-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+        .form-buttons .cancel-btn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Demande d'intervention</h2>
+    </div>
+    <div class="form-group">
+        <label for="date">Date demande :</label>
+        <input type="date" id="date" name="date" class="small-input">
+        <input type="time" id="time" name="time" class="small-input">
+    </div>
+    <div class="form-group">
+        <label for="demandeur">Demandeur :</label>
+        <input type="text" id="demandeur" name="demandeur">
+    </div>
+    <div class="form-group">
+        <label for="machine">Machine :</label>
+        <input type="text" id="machine" name="machine">
+    </div>
+    <div class="form-group">
+        <label for="organe">Organe :</label>
+        <input type="text" id="organe" name="organe">
+    </div>
+    <div class="form-group">
+        <label for="Domaine d'intervention ">Domaine d'intervention :</label>
+		<select type="text" id="Domaine d'intervention " name="Domaine d'intervention "  required>
+                    <option value="Mecanique">Mecanique</option>
+                    <option value="Electrique">Electrique</option>
+                    <option value="Instrumentation & automatisme">Instrumentation & automatisme</option>
+                </select>
+    </div>
+    <div class="form-group radio-group">
+        <label for="priorite">Priorité :</label>
+        <input type="radio" id="normale" name="priorite" value="normale">
+        <label for="normale">Normale</label>
+        <input type="radio" id="moyenne" name="priorite" value="moyenne">
+        <label for="moyenne">Moyenne</label>
+        <input type="radio" id="elevee" name="priorite" value="elevee">
+        <label for="elevee">Élevée</label>
+    </div>
+    <div class="form-group">
+	<label for="date"> Intervention souhaite le :</label>
+        <input type="date" id="date" name="date" class="small-input">
+        <input type="time" id="time" name="time" class="small-input">
+       
+    </div>
+    <div class="form-group">
+        <label for="pris_en_charge">Pris en charge :</label>
+        <textarea id="pris_en_charge" name="pris_en_charge" rows="2"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="description">Description du problème :</label>
+        <textarea id="description" name="description" rows="2"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="commentaires">Commentaires :</label>
+        <textarea id="commentaires" name="commentaires" rows="2"></textarea>
+    </div>
+    <div class="form-buttons">
+        <button class="submit-btn">Valider</button>
+        <button class="cancel-btn">Annuler</button>
+    </div>
+</div>
+
+</body>
+</html>
+
+ 
+ 
